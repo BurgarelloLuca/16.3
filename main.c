@@ -6,11 +6,13 @@ int main(void) {
     if (myFile == NULL) {
         printf("Errore durante l'apertura del file");
     }
-    int n;
+    int n, nNumeri;
     int count10 = 0;
     int count100 = 0;
     int count1000 = 0;
-    for (int i = 0; i < 100; i++) {
+    fscanf(myFile, "%d", &nNumeri);
+    printf("i numeri sono %d:\n",nNumeri);
+    for (int i = 0; i < nNumeri; i++) {
         fscanf(myFile, "%d", &n);
         if (n == 10) {
             count10++;
